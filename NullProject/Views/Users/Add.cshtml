@@ -1,0 +1,55 @@
+﻿@using congress.DTOs
+@model UsersDTO
+<!-- begin::main content -->
+<main class="main-content">
+
+	<div class="card">
+		<div class="card-body">
+			<h6 class="card-title">افزودن کاربر</h6>
+			<form class="needs-validation" method="post" action="/users/add" novalidate="">
+				<div class="form-row">
+					<div class="col-md-4 mb-3">
+						<label for="validationCustom01">نام</label>
+						<input type="text" class="form-control" asp-for="Name" required="">
+						<div class="valid-feedback">
+							صحیح است!
+						</div>
+					</div>
+					<div class="col-md-4 mb-3">
+						<label for="validationCustom02">نام خانوادگی</label>
+						<input type="text" class="form-control" asp-for="LastName" required="">
+						<div class="valid-feedback">
+							صحیح است!
+						</div>
+					</div>
+					<div class="col-md-4 mb-3">
+						<label for="validationCustom02">شماره تماس</label>
+						<input type="text" class="form-control" asp-for="Phone" required="">
+						<div class="valid-feedback">
+							صحیح است!
+						</div>
+					</div>
+
+				</div>
+				<div class="col-md-4 mb-3">
+					<label for="validationCustom02">کدملی</label>
+					<input type="text" class="form-control" asp-for="NationalCode" required="">
+					<div class="valid-feedback">
+						صحیح است!
+					</div>
+				</div>
+				<div class="col-md-4 mb-3">
+					<label for="validationCustom02">پرداخت</label>
+					<input type="checkbox"  class="form-control" asp-for = "Payed" required="">
+					<div class="valid-feedback">
+						صحیح است!
+					</div>
+				</div>
+
+				<button class="btn btn-primary" type="submit">ثبت فرم</button>
+			</form>
+		</div>
+	</div>
+
+</main>
+<!-- end::main content -->

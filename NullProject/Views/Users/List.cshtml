@@ -1,0 +1,42 @@
+﻿@using congress.DTOs
+
+@model List<UsersDTO>
+<!-- begin::main content -->
+<main class="main-content">
+
+	<div class="card">
+		<div class="card-body">
+			<a href="/users/add" class="btn btn-success">افزودن کاربر</a>
+			<table id="example1" class="table table-striped table-bordered" width="100%">
+				<thead>
+					<tr>
+						<th>نام</th>
+						<th>نام خانوادگی</th>
+						<th>شماره تماس</th>
+						<th>کدملی</th>
+
+					</tr>
+				</thead>
+				<tbody>
+					@foreach (var item in Model)
+					{
+						<tr>
+							<td>@item.Name</td>
+							<td>@item.LastName</td>
+							<td>@item.Phone</td>
+							<td>@item.NationalCode</td>
+							<td>
+								<a href="/Users/update?id=@item.Id" class="btn btn-warning">Edit</a>
+
+								<a href="/Users/delete?id=@item.Id" class="btn btn-danger">Remove</a>
+
+							</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+</main>
+<!-- end::main content -->
